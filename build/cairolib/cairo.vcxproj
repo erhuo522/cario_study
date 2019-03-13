@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>cairolib</ProjectName>
+    <ProjectGuid>{10F99465-3DE2-4292-A276-AAC30E51D85B}</ProjectGuid>
+    <RootNamespace>cairolib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\Bin_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../cario_lib/pixman/;.../../cario_lib/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;CAIRO_WIN32_STATIC_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\cario_lib\src\cairo-analysis-surface.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-arc.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-array.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-atomic.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-bentley-ottmann-rectangular.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-bentley-ottmann-rectilinear.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-bentley-ottmann.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-botor-scan-converter.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-boxes-intersect.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-boxes.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-cache.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-clip-boxes.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-clip-polygon.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-clip-region.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-clip-surface.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-clip-tor-scan-converter.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-clip.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-color.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-composite-rectangles.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-contour.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-damage.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-debug.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-default-context.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-device.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-error.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-fallback-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-font-face-twin-data.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-font-face-twin.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-font-face.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-font-options.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-freelist.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-gstate.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-hash.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-hull.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-image-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-image-info.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-image-source.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-image-surface.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-lzw.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-mask-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-matrix.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-mesh-pattern-rasterizer.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-misc.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-mono-scan-converter.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-no-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-observer.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-paginated-surface.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-bounds.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-fill.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-fixed.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-in-fill.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-stroke-boxes.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-stroke-polygon.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-stroke-traps.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-stroke-tristrip.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path-stroke.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-path.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-pattern.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-pen.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-polygon-intersect.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-polygon-reduce.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-polygon.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-raster-source-pattern.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-recording-surface.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-rectangle.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-rectangular-scan-converter.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-region.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-rtree.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-scaled-font.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-shape-mask-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-slope.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-spans-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-spans.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-spline.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-stroke-dash.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-stroke-style.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-surface-clipper.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-surface-fallback.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-surface-offset.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-surface-snapshot.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-surface-subsurface.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-surface-wrapper.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-surface.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-time.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-tor-scan-converter.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-tor22-scan-converter.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-toy-font-face.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-traps-compositor.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-traps.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-tristrip.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-unicode.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-user-font.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-version.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo-wideint.c" />
+    <ClCompile Include="..\..\cario_lib\src\cairo.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-access-accessors.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-access.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-bits-image.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-combine-float.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-combine32.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-conical-gradient.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-edge-accessors.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-edge.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-fast-path.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-filter.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-general.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-glyph.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-gradient-walker.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-image.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-implementation.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-linear-gradient.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-matrix.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-noop.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-radial-gradient.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-region16.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-region32.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-solid-fill.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-trap.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman-utils.c" />
+    <ClCompile Include="..\..\cario_lib\pixman\pixman.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\cario_lib\src\cairo-analysis-surface-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-arc-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-array-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-atomic-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-backend-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-box-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-boxes-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-cache-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-clip-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-clip-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-combsort-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-compiler-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-composite-rectangles-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-compositor-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-contour-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-contour-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-damage-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-default-context-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-deprecated.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-device-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-error-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-features.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-fixed-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-fixed-type-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-freed-pool-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-freelist-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-freelist-type-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-gstate-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-hash-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-image-info-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-image-surface-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-image-surface-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-list-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-list-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-malloc-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-mutex-impl-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-mutex-list-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-mutex-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-mutex-type-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-paginated-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-paginated-surface-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-path-fixed-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-path-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-pattern-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-pattern-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-recording-surface-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-recording-surface-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-reference-count-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-region-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-rtree-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-scaled-font-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-slope-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-spans-compositor-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-spans-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-stroke-dash-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-backend-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-clipper-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-fallback-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-observer-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-offset-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-snapshot-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-snapshot-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-subsurface-inline.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-subsurface-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-surface-wrapper-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-tee-surface-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-time-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-traps-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-tristrip-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-types-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-user-font-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-version.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-wideint-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo-wideint-type-private.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairo.h" />
+    <ClInclude Include="..\..\cario_lib\src\cairoint.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\config.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\loongson-mmintrin.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman-accessor.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman-combine32.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman-compiler.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman-edge-imp.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman-inlines.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman-private.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman-version.h" />
+    <ClInclude Include="..\..\cario_lib\pixman\pixman.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
