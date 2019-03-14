@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cario_test", "testlib\cario_test.vcxproj", "{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cairolib", "cariolib\cairo.vcxproj", "{10F99465-3DE2-4292-A276-AAC30E51D85B}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "zlib\zlib.vcxproj", "{FC20A383-1634-4DAE-995A-F775C33966E4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "png_lib\libpng.vcxproj", "{C14FD176-F3B8-4822-A2E2-D3E183C1E413}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cairolib", "cairolib\cairo.vcxproj", "{10F99465-3DE2-4292-A276-AAC30E51D85B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cairo_test", "testlib\cairo_test.vcxproj", "{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +15,6 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Debug|Win32.ActiveCfg = Debug|Win32
-		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Debug|Win32.Build.0 = Debug|Win32
-		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Release|Win32.ActiveCfg = Release|Win32
-		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Release|Win32.Build.0 = Release|Win32
-		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Debug|Win32.ActiveCfg = Debug|Win32
-		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Debug|Win32.Build.0 = Debug|Win32
-		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Release|Win32.ActiveCfg = Release|Win32
-		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Release|Win32.Build.0 = Release|Win32
 		{FC20A383-1634-4DAE-995A-F775C33966E4}.Debug|Win32.ActiveCfg = Debug|Win32
 		{FC20A383-1634-4DAE-995A-F775C33966E4}.Debug|Win32.Build.0 = Debug|Win32
 		{FC20A383-1634-4DAE-995A-F775C33966E4}.Release|Win32.ActiveCfg = Release|Win32
@@ -31,6 +23,14 @@ Global
 		{C14FD176-F3B8-4822-A2E2-D3E183C1E413}.Debug|Win32.Build.0 = Debug|Win32
 		{C14FD176-F3B8-4822-A2E2-D3E183C1E413}.Release|Win32.ActiveCfg = Release|Win32
 		{C14FD176-F3B8-4822-A2E2-D3E183C1E413}.Release|Win32.Build.0 = Release|Win32
+		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Debug|Win32.Build.0 = Debug|Win32
+		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Release|Win32.ActiveCfg = Release|Win32
+		{10F99465-3DE2-4292-A276-AAC30E51D85B}.Release|Win32.Build.0 = Release|Win32
+		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Debug|Win32.Build.0 = Debug|Win32
+		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Release|Win32.ActiveCfg = Release|Win32
+		{58EF1135-029D-4EA4-A157-39E4D8AFD7BE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

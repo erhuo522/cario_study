@@ -46,6 +46,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\zlibvc.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,6 +91,9 @@
     <ClCompile Include="..\..\png_lib\zlib\trees.c" />
     <ClCompile Include="..\..\png_lib\zlib\uncompr.c" />
     <ClCompile Include="..\..\png_lib\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="zlibvc.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
