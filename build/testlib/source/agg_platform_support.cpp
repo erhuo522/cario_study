@@ -106,6 +106,7 @@ LRESULT CALLBACK window_proc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
         //--------------------------------------------------------------------
         case WM_DESTROY:
 			{
+				app->on_destroy();
 				::PostQuitMessage(0);
 			}
 			break;
@@ -123,7 +124,7 @@ LRESULT CALLBACK window_proc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 //------------------------------------------------------------------------
 void platform_support::message(const char* msg)
 {
-	::MessageBox(m_hwnd, msg, "AGG Message", MB_OK);
+	::MessageBox(m_hwnd, msg, "Cairo Message", MB_OK);
 }
 
 
@@ -184,19 +185,7 @@ int platform_support::run()
 	}
 
 	return (int)msg.wParam;
-}
-
-
-     
-
-    
-
-
-
-    //------------------------------------------------------------------------
- 
-
-    
+} 
 
 
     //------------------------------------------------------------------------
@@ -207,6 +196,7 @@ int platform_support::run()
     void platform_support::on_left_button_up(int x, int y, int flags) {}
     void platform_support::on_key(int x, int y, unsigned key, int flags) {} 
     void platform_support::on_draw(HDC hdc) {}
+	void platform_support::on_destroy() {}
    
  
 

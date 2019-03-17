@@ -27,6 +27,7 @@ public:
 	virtual void on_left_button_up(int x, int y, int  flags);
 	virtual void on_key(int x, int y, unsigned key, int flags);
 	virtual void on_draw(HDC hdc); 
+	virtual void on_destroy();
 protected:
 
 

@@ -1,4 +1,4 @@
-
+ï»¿
 #include <windows.h>
  
 #include "agg_platform_support.h"
@@ -17,68 +17,100 @@ class the_application : public  platform_support
 
 public:
 	the_application() 
+		:m_surface(NULL), m_cr(NULL)
 	{
-
+	 
 	}
 
 	void on_init(HWND hwnd)
 	{
-		HDC hdc = GetDC(hwnd);
-		m_pixel_map.create(800,600, pixel_map::org_color24,255);
-		ReleaseDC(hwnd,hdc);	
 
-		//ÉùÃ÷ÁËÒ»¸ö Cairo Íâ¹ÛÓëÒ»¸ö Cairo »·¾³¡£ 
-		cairo_surface_t *surface = cairo_image_surface_create(CAIRO_FORMAT_RGB24, 800, 600);
-		cairo_t *cr = cairo_create(surface);
-		 cairo_set_source_rgb (cr, 1.0, 1.0, 1.0);
-		/*
-		//Ô²ĞÎ 
-		 cairo_arc (cr, 50, 300, 40, 0, 2 * 3.1415/4);
-		 cairo_stroke_preserve ( cr) ;
-		 cairo_stroke ( cr) ;
-		  
-		//ÊµĞÄ¾ØĞÎ
-		 cairo_set_source_rgb ( cr, 0.6 , 0.6 , 0.0 ) ;
-		 cairo_rectangle ( cr, 150 , 20 , 100 , 100 ) ;
-		 cairo_fill ( cr) ;
+	}
 
-		 */
-		//¿ÕĞÄ¾ØĞÎ
-	    cairo_set_source_rgb (cr,  0.627, 0, 0);
-		cairo_rectangle ( cr, 20 , 20 , 120 , 80 ) ; 
-		//cairo_stroke ( cr) ;
+	void on_resize(int sx, int sy)
+	{
+		m_sx = sx;
+		m_sy = sy;
 
-		 //»­Ö±Ïß 
-		//cairo_set_source_rgb (cr,  0.627, 0, 0);
-		cairo_move_to( cr, 40, 120) ;
-		cairo_line_to( cr, 500 , 300);
-		 
-		cairo_stroke( cr) ;
+		m_pixel_map.create(m_sx, m_sy, pixel_map::org_color24, 255);
+	 
+		if(m_cr)
+		{	
+			cairo_destroy(m_cr);
+		}
 
-		//°ÑÍ¼ÏñÄÚ´æÊı¾İÄÃ×ß
-        m_pixel_map.copy_bits( cairo_image_surface_get_data(surface), false);
-
-		//»ØÊÕËùÓĞ Cairo »·¾³ÓëÍâ¹ÛËùÕ¼ÓÃµÄÄÚ´æ×ÊÔ´¡£
-		cairo_destroy(cr);
-		cairo_surface_destroy(surface);
+		if(m_surface)
+		{
+			cairo_surface_destroy(m_surface);
+		}
 		
-		 
+		m_surface = cairo_image_surface_create(CAIRO_FORMAT_RGB24, m_sx, m_sy);
+		m_cr = cairo_create(m_surface);
 	}
 
 	void on_draw(HDC hdc)
 	{
-		 
-		m_pixel_map.blend(hdc,0,0);
+		//æ¸…å±
+		 cairo_set_source_rgb (m_cr, 1.0, 1.0, 1.0);
+		 cairo_paint(m_cr);
 		
+		 //cairo_set_antialias(m_cr,CAIRO_ANTIALIAS_SUBPIXEL);
+		 
+		//åœ†å½¢ 
+		 cairo_set_source_rgb (m_cr, 1.0, 0.0, 0.4); 
+		 cairo_arc (m_cr, 350, 300, 40, 0, 2 * 3.1415);
+		 cairo_stroke_preserve (m_cr);
+		 cairo_set_source_rgb (m_cr, 0.3, 0.4, 0.6);
+         cairo_fill(m_cr);
+
+		//å®å¿ƒçŸ©å½¢
+		 cairo_set_source_rgb (m_cr, 0.6 , 0.6 , 0.0 ) ;
+		 cairo_rectangle (m_cr, 250 , 80 , 100 , 100 ) ;
+		 cairo_fill (m_cr) ;
+
+		 
+		//ç©ºå¿ƒçŸ©å½¢
+	    cairo_set_source_rgb (m_cr,  0.627, 0, 0);
+		cairo_rectangle (m_cr, 20 , 20 , 120 , 80 ) ; 
+		cairo_stroke ( m_cr) ;
+
+		 //ç”»ç›´çº¿ 
+		cairo_set_source_rgb (m_cr,  0.627, 0, 0);
+		cairo_move_to(m_cr, 40, 120) ;
+		cairo_line_to(m_cr, 500 , 300);
+		cairo_stroke(m_cr) ;
+
+		//æŠŠå›¾åƒå†…å­˜æ•°æ®æ‹¿èµ°
+        m_pixel_map.copy_bits( cairo_image_surface_get_data(m_surface), false);
+
+		m_pixel_map.blend(hdc,0,0);
 	}
- 
- 
+
+	void on_destroy()
+	{
+		m_pixel_map.destroy();
 	 
+		if(m_cr)
+		{	
+			cairo_destroy(m_cr);
+		}
+
+		if(m_surface)
+		{
+			cairo_surface_destroy(m_surface);
+		}
+	}
 
 private:
 	pixel_map  m_pixel_map;
-	bool      m_flip_y;
+	bool       m_flip_y;
 
+private:
+	cairo_surface_t* m_surface;
+	cairo_t*         m_cr;
+
+	int        m_sx;
+	int        m_sy;
 
 };
  
@@ -90,12 +122,10 @@ private:
 //*******************************************************************************
 int agg_main()
 {
-	
-
  	 the_application app;
- 	 app.caption("agg Test");
+ 	 app.caption("cairo Test");
  
- 	 if(app.init(850,650, 0))
+ 	 if(app.init(800,600, 0))
  	 {
  		 app.run();
  	 }
