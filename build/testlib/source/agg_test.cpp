@@ -80,6 +80,20 @@ public:
 		cairo_stroke(cr) ;
 	}
 
+	void  draw_text(cairo_t* cr)
+	{
+		cairo_set_source_rgb (cr, 0.0, 0.0, 0.0); 
+		
+		cairo_select_font_face (cr, "Georgia", CAIRO_FONT_SLANT_NORMAL, CAIRO_FONT_WEIGHT_BOLD); 
+		cairo_set_font_size (cr, 28);
+		
+		cairo_move_to (cr, 400, 500);
+
+		 cairo_show_text(cr,"This is a cairo example!");
+
+		cairo_stroke(cr) ;
+	}
+
 	void  draw_image(cairo_t* cr)
 	{
 
@@ -176,6 +190,7 @@ public:
 		 cairo_set_source_rgb (m_cr, 1.0, 1.0, 1.0);
 		 cairo_paint(m_cr);
 		
+		 draw_text(m_cr);
 		 //cairo_set_antialias(m_cr,CAIRO_ANTIALIAS_SUBPIXEL);
 		 
 		draw_test(m_cr);
