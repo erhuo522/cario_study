@@ -184,6 +184,52 @@ public:
 		cairo_pattern_destroy(pat3);
 	}
 
+	void draw_evenodd_winding(cairo_t *cr)
+	{
+		cairo_set_fill_rule(cr, CAIRO_FILL_RULE_EVEN_ODD); 
+
+		cairo_set_line_width(cr, 2.5); 
+
+		cairo_move_to(cr, 70, 255);
+		cairo_line_to(cr, 643, 255);
+		cairo_line_to(cr, 180, 591);
+		cairo_line_to(cr, 357, 45);
+		cairo_line_to(cr, 534, 590);
+		cairo_close_path(cr);
+
+	 
+		cairo_set_source_rgb(cr, 0.0, 0.0, 0.0);
+		cairo_stroke_preserve(cr);
+
+		cairo_set_source_rgba(cr, 0.0, 1.0, 0.0,0.3);
+		cairo_fill(cr);
+	}
+
+	void draw_nonzero_winding(cairo_t *cr)
+	{
+		cairo_set_fill_rule(cr, CAIRO_FILL_RULE_WINDING); 
+
+		cairo_set_line_width(cr, 2.5); 
+
+		cairo_move_to(cr, 50, 50);
+		cairo_line_to(cr, 500, 50);
+		cairo_line_to(cr, 500, 500);
+		cairo_line_to(cr, 50, 500);
+		cairo_close_path(cr);
+
+		cairo_move_to(cr, 150, 150);
+		cairo_line_to(cr, 150, 400);
+		cairo_line_to(cr, 400, 400);
+		cairo_line_to(cr, 400, 150);
+		cairo_close_path(cr);
+
+	 
+		cairo_set_source_rgb(cr, 0.0, 0.0, 0.0);
+		cairo_stroke_preserve(cr);
+
+		cairo_set_source_rgba(cr, 0.0, 1.0, 0.0,0.3);
+		cairo_fill(cr);
+	}
 	void on_draw(HDC hdc)
 	{
 		//清屏
@@ -200,6 +246,9 @@ public:
 		draw_gradient2(m_cr);
 		draw_gradient3(m_cr);  
 		 
+		draw_evenodd_winding(m_cr);
+		draw_nonzero_winding(m_cr);
+
 		m_pixel_map.blend(hdc,0,0);
 	}
 
