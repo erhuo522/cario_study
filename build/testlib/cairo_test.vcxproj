@@ -88,6 +88,9 @@
   <ItemGroup>
     <ClCompile Include="source\agg_platform_support.cpp" />
     <ClCompile Include="source\agg_test.cpp" />
+    <ClCompile Include="source\agg_test_outline.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="source\agg_win32_bmp.cpp" />
   </ItemGroup>
   <ItemGroup>
