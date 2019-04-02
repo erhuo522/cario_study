@@ -24,6 +24,12 @@
     <ClCompile Include="source\agg_win32_bmp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="source\agg_test_outline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\agg_test_function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\agg_platform_support.h">
