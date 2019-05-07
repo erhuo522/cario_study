@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\json_lib\src\json_lib\json_reader.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\json_lib\src\json_lib\json_writer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\json_lib\src\json_lib\json_value.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\json_lib\include\json\assertions.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\config.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\features.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\forwards.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\json.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\reader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\writer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\json_lib\include\json\value.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{1caf7243-90dd-408d-94bf-60ec862a705d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{07158f89-fc98-4dca-84f1-e9a42592b4b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
