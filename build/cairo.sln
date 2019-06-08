@@ -20,6 +20,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "pnglib\libpng.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeglib", "jpeglib\jpeglib.vcxproj", "{99FBEED6-088F-4FD7-A837-DBD7C7CD3425}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tesslib", "tesslib\tesslib.vcxproj", "{C2F80775-2AF8-43A8-8D30-F44121737403}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsonlib", "jsonlib\jsonlib.vcxproj", "{32AFB453-6379-4274-B1E8-BFF5408DED8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -46,6 +50,14 @@ Global
 		{99FBEED6-088F-4FD7-A837-DBD7C7CD3425}.Debug|Win32.Build.0 = Debug|Win32
 		{99FBEED6-088F-4FD7-A837-DBD7C7CD3425}.Release|Win32.ActiveCfg = Release|Win32
 		{99FBEED6-088F-4FD7-A837-DBD7C7CD3425}.Release|Win32.Build.0 = Release|Win32
+		{C2F80775-2AF8-43A8-8D30-F44121737403}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C2F80775-2AF8-43A8-8D30-F44121737403}.Debug|Win32.Build.0 = Debug|Win32
+		{C2F80775-2AF8-43A8-8D30-F44121737403}.Release|Win32.ActiveCfg = Release|Win32
+		{C2F80775-2AF8-43A8-8D30-F44121737403}.Release|Win32.Build.0 = Release|Win32
+		{32AFB453-6379-4274-B1E8-BFF5408DED8E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{32AFB453-6379-4274-B1E8-BFF5408DED8E}.Debug|Win32.Build.0 = Debug|Win32
+		{32AFB453-6379-4274-B1E8-BFF5408DED8E}.Release|Win32.ActiveCfg = Release|Win32
+		{32AFB453-6379-4274-B1E8-BFF5408DED8E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
