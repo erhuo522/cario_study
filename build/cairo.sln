@@ -24,6 +24,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tesslib", "tesslib\tesslib.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsonlib", "jsonlib\jsonlib.vcxproj", "{32AFB453-6379-4274-B1E8-BFF5408DED8E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsqlite", "sqlitelib\libsqlite.vcxproj", "{C09C3DA0-EEE3-4A16-80A2-F52E910CACFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -58,6 +60,10 @@ Global
 		{32AFB453-6379-4274-B1E8-BFF5408DED8E}.Debug|Win32.Build.0 = Debug|Win32
 		{32AFB453-6379-4274-B1E8-BFF5408DED8E}.Release|Win32.ActiveCfg = Release|Win32
 		{32AFB453-6379-4274-B1E8-BFF5408DED8E}.Release|Win32.Build.0 = Release|Win32
+		{C09C3DA0-EEE3-4A16-80A2-F52E910CACFA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C09C3DA0-EEE3-4A16-80A2-F52E910CACFA}.Debug|Win32.Build.0 = Debug|Win32
+		{C09C3DA0-EEE3-4A16-80A2-F52E910CACFA}.Release|Win32.ActiveCfg = Release|Win32
+		{C09C3DA0-EEE3-4A16-80A2-F52E910CACFA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
